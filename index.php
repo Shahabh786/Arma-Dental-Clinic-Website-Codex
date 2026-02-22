@@ -16,8 +16,8 @@ require_once __DIR__ . '/includes/header.php';
           precise diagnostics, and a calm care experience for families and professionals.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="<?php echo esc($whatsAppLink); ?>?text=Hi%20Arma%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
-          <a class="btn btn-outline" href="contact.php">Schedule Visit</a>
+          <a class="btn btn-primary" href="appointments.php#appointment-request-form">Schedule Visit</a>
+          <a class="btn btn-outline" href="<?php echo esc($whatsAppLink); ?>?text=Hi%20Arma%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
         </div>
         <ul class="hero-points">
           <li>Painless treatment protocols</li>
@@ -29,13 +29,14 @@ require_once __DIR__ . '/includes/header.php';
       <div class="hero-card" aria-hidden="true">
         <div class="hero-card-top">
           <span>Opening Hours</span>
-          <strong>Mon-Sat: 10:00 AM to 8:00 PM</strong>
+          <strong>Tue-Sun: 11:00 AM to 2:30 PM, 5:30 PM to 10:00 PM</strong>
         </div>
         <div class="hero-card-body">
           <p>Need urgent dental help?</p>
           <a href="<?php echo esc($callLink); ?>"><?php echo esc($phone); ?></a>
         </div>
-        <div class="hero-card-badge">5★ Patient Experience</div>
+        <div class="hero-card-badge">4.9 ★ Patient Experience</div>
+        <img src="assets/images/hero-dental.jpg" alt="Modern dental clinic treatment" style="width:100%;height:210px;object-fit:cover;border-radius:14px;margin-top:16px;" loading="eager">
       </div>
     </div>
   </section>

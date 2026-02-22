@@ -10,13 +10,15 @@ require_once __DIR__ . '/includes/header.php';
     <div class="container page-hero-grid">
       <div>
         <p class="eyebrow">About Us</p>
-        <h1>Trusted Dental Care Built on Precision and Empathy</h1>
+        <h1>Confident Smiles Begin with Trusted, Human-Centered Care</h1>
         <p>
-          <strong><?php echo esc($clinicName); ?></strong> delivers modern clinical outcomes with a human-centered
-          patient experience. We serve families, professionals, and children with comprehensive dentistry.
+          At <strong><?php echo esc($clinicName); ?></strong>, we believe a confident smile can change everything.
+          Located in the heart of Mira Road, we provide high-quality, affordable, and comfortable dental care
+          for families and individuals of all age groups.
         </p>
       </div>
       <div class="hero-card">
+        <img src="assets/images/about-dental.jpg" alt="Arma Dental Clinic interior" style="width:100%;height:220px;object-fit:cover;border-radius:14px;margin-bottom:14px;" loading="lazy">
         <div class="hero-card-top">
           <span>Clinic Promise</span>
           <strong>Clear Advice. Safe Treatment. Lasting Results.</strong>
@@ -33,10 +35,15 @@ require_once __DIR__ . '/includes/header.php';
     <div class="container why-grid">
       <div>
         <p class="eyebrow">Our Philosophy</p>
-        <h2>Care Plans That Prioritize Long-Term Oral Health</h2>
+        <h2>Compassion, Precision, and Complete Honesty</h2>
         <p>
-          We believe good dentistry is preventive, transparent, and personalized. Every patient receives
-          structured diagnostics and a clearly explained treatment roadmap.
+          Led by experienced dental professionals, we handle everything from routine checkups to advanced smile
+          makeovers. Our services include implants, braces, cosmetic veneers, root canals, and kids' dentistry
+          using modern technology with a gentle touch.
+        </p>
+        <p style="margin-top:12px;">
+          Whether you visit us for regular cleaning or full smile transformation, our goal stays simple:
+          make your treatment easy, painless, and anxiety-free in a space that feels calm, welcoming, and safe.
         </p>
       </div>
       <ul class="tick-list">
@@ -61,7 +68,7 @@ require_once __DIR__ . '/includes/header.php';
         </article>
         <article class="service-card">
           <h3>Experienced Team</h3>
-          <p>Multi-speciality support for cosmetic, restorative, and preventive dentistry.</p>
+          <p>Multi-speciality support for preventive, restorative, cosmetic, and pediatric dental care.</p>
         </article>
         <article class="service-card">
           <h3>Comfort-First Setup</h3>

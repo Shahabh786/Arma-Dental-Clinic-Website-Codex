@@ -1,0 +1,21 @@
+{
+  "name": "Arma Dental Clinic",
+  "short_name": "Arma Dental",
+  "description": "Premium modern dental care in Mira Road.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#e2e1df",
+  "theme_color": "#473425",
+  "icons": [
+    {
+      "src": "/assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
