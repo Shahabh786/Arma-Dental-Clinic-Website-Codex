@@ -7,7 +7,7 @@ require_once __DIR__ . '/includes/header.php';
 ?>
 
 <main>
-  <section class="page-hero section">
+  <section class="page-hero section why-us-page-hero">
     <div class="container">
       <div class="page-hero-grid why-us-hero-grid">
         <div>
@@ -136,6 +136,76 @@ require_once __DIR__ . '/includes/header.php';
           <p>Designed for convenience and stress-free visits.</p>
         </article>
       </div>
+
+      <section class="featured-doctor" data-reveal aria-labelledby="featured-doctor-title">
+        <div class="section-head featured-doctor-head">
+          <p class="eyebrow">Meet Your Dentist</p>
+          <h2 id="featured-doctor-title">Meet Your Dentist</h2>
+          <p>Compassionate dentistry focused on comfort, trust, and long-term oral health.</p>
+        </div>
+        <article class="featured-doctor-card">
+          <div class="featured-doctor-media">
+            <img
+              src="/assets/images/alfiashaidar.webp"
+              alt="Dr. Alfia, Lead Dentist at Arma Dental Clinic"
+              loading="lazy"
+              decoding="async"
+              width="720"
+              height="900"
+            />
+          </div>
+          <div class="featured-doctor-content">
+            <div class="featured-doctor-title">
+              <h3>Dr. Alfia</h3>
+              <p>Lead Dentist - Arma Dental Clinic</p>
+            </div>
+
+            <ul class="featured-doctor-points">
+              <li>
+                <span class="featured-point-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 20c4-3.3 6.7-6 6.7-9.5a3.7 3.7 0 0 0-6.7-2.3 3.7 3.7 0 0 0-6.7 2.3c0 3.5 2.7 6.2 6.7 9.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span>Patient-focused and gentle approach</span>
+              </li>
+              <li>
+                <span class="featured-point-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 7.5A2.5 2.5 0 0 1 7.5 5h9A2.5 2.5 0 0 1 19 7.5v6A2.5 2.5 0 0 1 16.5 16H11l-4 3v-3H7.5A2.5 2.5 0 0 1 5 13.5v-6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span>Clear explanation before every treatment</span>
+              </li>
+              <li>
+                <span class="featured-point-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 3.8 5 7v5.2c0 4.4 2.6 7.1 7 8.8 4.4-1.7 7-4.4 7-8.8V7l-7-3.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="m9.5 12.1 1.8 1.8 3.4-3.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span>Ethical dentistry philosophy</span>
+              </li>
+              <li>
+                <span class="featured-point-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 12.5h4l2.2-4.5L13 17l2.4-4.5H20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span>Focus on painless and comfortable care</span>
+              </li>
+            </ul>
+
+            <blockquote class="featured-doctor-quote">
+              <p>&ldquo;Our goal is not just to treat teeth, but to make every patient feel comfortable, confident, and cared for.&rdquo;</p>
+            </blockquote>
+
+            <div class="featured-doctor-actions">
+              <a class="btn btn-outline" href="<?php echo esc(route_path('doctors.php')); ?>">See More Consultants</a>
+            </div>
+          </div>
+        </article>
+      </section>
 
       <div class="trust-banner" data-reveal>
         <div class="trust-item">
