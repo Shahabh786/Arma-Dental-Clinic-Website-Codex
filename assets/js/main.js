@@ -193,6 +193,12 @@ if (
       service_needed: (document.getElementById('service')?.value || 'General Checkup').trim(),
       additional_notes: (document.getElementById('message')?.value || '').trim()
     };
+    const selectedDoctor = (document.getElementById('doctor')?.value || '').trim();
+    if (selectedDoctor) {
+      payload.additional_notes = payload.additional_notes
+        ? `Doctor Preference: ${selectedDoctor}\n${payload.additional_notes}`
+        : `Doctor Preference: ${selectedDoctor}`;
+    }
 
     if (!payload.full_name || !payload.phone_number || !payload.appointment_date || !payload.appointment_time_slot) {
       setToast('Please complete your details, choose a date, and select an available time slot.', true);

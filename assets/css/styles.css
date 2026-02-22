@@ -1499,6 +1499,102 @@ a {
   align-items: center;
 }
 
+.appointments-page-hero {
+  padding-bottom: 24px;
+}
+
+.appointment-badge-row {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.appointment-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(21, 153, 182, 0.28);
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--brand-700);
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 7px 11px;
+}
+
+.lead-dentist-line {
+  margin-top: 14px;
+  font-weight: 700;
+  color: var(--brand-900);
+}
+
+.appointments-page-section {
+  padding-top: 24px;
+}
+
+.appointments-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.appointments-info-col {
+  display: grid;
+  gap: 14px;
+}
+
+.appointments-info-card,
+.emergency-booking-card {
+  background: #fff;
+  border: 1px solid #d8e8f2;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.appointments-info-card h2 {
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  color: var(--brand-900);
+}
+
+.booking-steps {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  counter-reset: booking-step;
+}
+
+.booking-steps li {
+  counter-increment: booking-step;
+  position: relative;
+  padding-left: 34px;
+}
+
+.booking-steps li::before {
+  content: counter(booking-step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(130deg, var(--brand-700), var(--brand-900));
+}
+
+.emergency-booking-card h3 {
+  color: var(--brand-900);
+  margin-bottom: 14px;
+}
+
 .appointment-form {
   background: #fff;
   border: 1px solid var(--line);
@@ -1507,6 +1603,25 @@ a {
   box-shadow: var(--shadow-sm);
   display: grid;
   gap: 8px;
+}
+
+.premium-appointment-form {
+  border-radius: 20px;
+  box-shadow: 0 18px 36px rgba(14, 56, 82, 0.14);
+}
+
+.appointment-form-section {
+  border: 1px solid #dceaf2;
+  border-radius: 14px;
+  background: #fbfdff;
+  padding: 14px;
+  margin-bottom: 8px;
+}
+
+.appointment-form-section h3 {
+  margin-bottom: 10px;
+  color: var(--brand-900);
+  font-size: 1rem;
 }
 
 .appointment-form label {
@@ -1538,6 +1653,60 @@ a {
 
 .full {
   width: 100%;
+}
+
+.appointment-microcopy {
+  margin-top: 6px;
+  display: grid;
+  gap: 6px;
+}
+
+.appointment-microcopy span {
+  position: relative;
+  padding-left: 22px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #2b556d;
+}
+
+.appointment-microcopy span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(150deg, var(--brand-500), var(--mint));
+}
+
+.appointment-social-proof {
+  padding-top: 34px;
+}
+
+.appointment-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.appointment-proof-grid article {
+  border-radius: 16px;
+  border: 1px solid #d8e8f2;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  padding: 20px;
+}
+
+.appointment-proof-grid h3 {
+  margin-bottom: 8px;
+  color: var(--brand-900);
+}
+
+@media (min-width: 1025px) {
+  .premium-appointment-form {
+    margin-top: -278px;
+  }
 }
 
 .site-footer {
@@ -1628,6 +1797,14 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .appointments-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-proof-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .lead-dentist-card {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -1662,6 +1839,22 @@ a {
 
   .section {
     padding: 66px 0;
+  }
+
+  .appointments-page-hero {
+    padding-bottom: 14px;
+  }
+
+  .appointments-page-section {
+    padding-top: 16px;
+  }
+
+  .appointment-proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-form-section {
+    padding: 12px;
   }
 
   .why-us-page-hero {
