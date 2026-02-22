@@ -1,4 +1,20 @@
 <?php
+$requestPath = (string) parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+$slugDispatch = [
+  '/about' => __DIR__ . '/about.php',
+  '/doctors' => __DIR__ . '/doctors.php',
+  '/services' => __DIR__ . '/services.php',
+  '/appointments' => __DIR__ . '/appointments.php',
+  '/contact' => __DIR__ . '/contact.php',
+  '/testimonials' => __DIR__ . '/testimonials.php',
+  '/clinic-tour' => __DIR__ . '/clinic-tour.php'
+];
+
+if (PHP_SAPI !== 'cli' && isset($slugDispatch[$requestPath])) {
+  require $slugDispatch[$requestPath];
+  exit;
+}
+
 $pageTitle = 'Arma Dental Clinic | Dental Clinic for Smile Design and Family Dentistry';
 $metaDescription = 'Arma Dental Clinic provides modern, painless dental treatments including smile makeovers, implants, and preventive care. Book an appointment today.';
 $pagePath = 'index.php';
