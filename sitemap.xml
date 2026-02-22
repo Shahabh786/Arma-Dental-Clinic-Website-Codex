@@ -6,23 +6,38 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.armadental.in/about.php</loc>
+    <loc>https://www.armadental.in/services</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.armadental.in/doctors</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.armadental.in/services.php</loc>
+    <loc>https://www.armadental.in/appointments</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.armadental.in/testimonials.php</loc>
+    <loc>https://www.armadental.in/contact</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.armadental.in/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.armadental.in/clinic-tour</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.armadental.in/contact.php</loc>
+    <loc>https://www.armadental.in/testimonials</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>

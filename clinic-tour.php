@@ -6,11 +6,22 @@ $pagePath = 'clinic-tour.php';
 require_once __DIR__ . '/includes/header.php';
 
 $clinicImageDir = __DIR__ . '/assets/images/clinic_images';
-$clinicImages = glob($clinicImageDir . '/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', GLOB_BRACE);
-if ($clinicImages === false) {
-  $clinicImages = [];
+$allImages = glob($clinicImageDir . '/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', GLOB_BRACE);
+$clinicImages = [];
+
+if (is_array($allImages)) {
+  $priority = ['webp' => 1, 'jpg' => 2, 'jpeg' => 3, 'png' => 4];
+  foreach ($allImages as $imagePath) {
+    $ext = strtolower((string) pathinfo($imagePath, PATHINFO_EXTENSION));
+    $stem = strtolower((string) pathinfo($imagePath, PATHINFO_FILENAME));
+    $score = $priority[$ext] ?? 99;
+    if (!isset($clinicImages[$stem]) || $score < $clinicImages[$stem]['score']) {
+      $clinicImages[$stem] = ['path' => $imagePath, 'score' => $score];
+    }
+  }
 }
-sort($clinicImages, SORT_NATURAL | SORT_FLAG_CASE);
+
+ksort($clinicImages, SORT_NATURAL | SORT_FLAG_CASE);
 ?>
 
 <main>
@@ -31,13 +42,14 @@ sort($clinicImages, SORT_NATURAL | SORT_FLAG_CASE);
         </div>
       <?php else: ?>
         <div class="clinic-gallery-grid">
-          <?php foreach ($clinicImages as $imagePath): ?>
+          <?php foreach ($clinicImages as $imageData): ?>
             <?php
+              $imagePath = $imageData['path'];
               $relativePath = 'assets/images/clinic_images/' . basename($imagePath);
               $label = ucwords(str_replace(['-', '_'], ' ', pathinfo($imagePath, PATHINFO_FILENAME)));
             ?>
-            <button type="button" class="clinic-gallery-card" data-gallery-open="<?php echo esc($relativePath); ?>" data-gallery-alt="<?php echo esc($label); ?>" aria-label="View <?php echo esc($label); ?>">
-              <img src="<?php echo esc($relativePath); ?>" alt="<?php echo esc($label); ?>" loading="lazy">
+            <button type="button" class="clinic-gallery-card" data-gallery-open="/<?php echo esc($relativePath); ?>" data-gallery-alt="<?php echo esc($label); ?>" aria-label="View <?php echo esc($label); ?>">
+              <img src="/<?php echo esc($relativePath); ?>" alt="<?php echo esc($label); ?>" loading="lazy">
               <span class="clinic-gallery-overlay">View</span>
             </button>
           <?php endforeach; ?>

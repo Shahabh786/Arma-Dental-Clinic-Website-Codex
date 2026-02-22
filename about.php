@@ -18,7 +18,7 @@ require_once __DIR__ . '/includes/header.php';
         </p>
       </div>
       <div class="hero-card">
-        <img src="assets/images/about-dental.jpg" alt="Arma Dental Clinic interior" style="width:100%;height:220px;object-fit:cover;border-radius:14px;margin-bottom:14px;" loading="lazy">
+        <img src="/assets/images/about-dental.webp" alt="Arma Dental Clinic interior" style="width:100%;height:220px;object-fit:cover;border-radius:14px;margin-bottom:14px;" loading="lazy">
         <div class="hero-card-top">
           <span>Clinic Promise</span>
           <strong>Clear Advice. Safe Treatment. Lasting Results.</strong>
@@ -76,7 +76,7 @@ require_once __DIR__ . '/includes/header.php';
         </article>
       </div>
       <div class="section-cta">
-        <a class="btn btn-primary" href="contact.php">Book Your Consultation</a>
+        <a class="btn btn-primary" href="/contact">Book Your Consultation</a>
       </div>
     </div>
   </section>

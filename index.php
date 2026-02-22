@@ -16,7 +16,7 @@ require_once __DIR__ . '/includes/header.php';
           precise diagnostics, and a calm care experience for families and professionals.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="appointments.php#appointment-request-form">Schedule Visit</a>
+          <a class="btn btn-primary" href="/appointments#appointment-request-form">Schedule Visit</a>
           <a class="btn btn-outline" href="<?php echo esc($whatsAppLink); ?>?text=Hi%20Arma%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
         </div>
         <ul class="hero-points">
@@ -36,7 +36,7 @@ require_once __DIR__ . '/includes/header.php';
           <a href="<?php echo esc($callLink); ?>"><?php echo esc($phone); ?></a>
         </div>
         <div class="hero-card-badge">4.9 ★ Patient Experience</div>
-        <img src="assets/images/hero-dental.jpg" alt="Modern dental clinic treatment" style="width:100%;height:210px;object-fit:cover;border-radius:14px;margin-top:16px;" loading="eager">
+        <img src="/assets/images/hero-dental.webp" alt="Modern dental clinic treatment" style="width:100%;height:210px;object-fit:cover;border-radius:14px;margin-top:16px;" loading="eager">
       </div>
     </div>
   </section>
@@ -83,7 +83,7 @@ require_once __DIR__ . '/includes/header.php';
         </article>
       </div>
       <div class="section-cta">
-        <a class="btn btn-outline" href="services.php">View All Services</a>
+        <a class="btn btn-outline" href="/services">View All Services</a>
       </div>
     </div>
   </section>

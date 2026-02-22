@@ -6,7 +6,7 @@ $address = "Shop No. 5, N G Heritage, Near Hyderi Chowk, Naya Nagar, Mira Road, 
 $whatsAppLink = "https://wa.me/91{$phone}";
 $callLink = "tel:+91{$phone}";
 $tagline = "Smile Design & Dental Wellness";
-$siteBaseUrl = "https://armadental.in";
+$siteBaseUrl = "https://www.armadental.in";
 $defaultKeywords = "Arma Dental Clinic, Mira Road dentist, dental clinic Thane, cosmetic dentistry, root canal, dental implants, teeth whitening, oral care";
 $pageMeta = [
   "index.php" => [
@@ -50,6 +50,17 @@ $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' :
 $host = $_SERVER['HTTP_HOST'] ?? 'localhost:8000';
 $baseUrl = "{$scheme}://{$host}";
 
+$routeMap = [
+  'index.php' => '/',
+  'about.php' => '/about',
+  'doctors.php' => '/doctors',
+  'services.php' => '/services',
+  'appointments.php' => '/appointments',
+  'contact.php' => '/contact',
+  'testimonials.php' => '/testimonials',
+  'clinic-tour.php' => '/clinic-tour'
+];
+
 function esc(string $value): string
 {
   return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
@@ -59,4 +70,32 @@ function page_url(string $path): string
 {
   global $baseUrl;
   return rtrim($baseUrl, '/') . '/' . ltrim($path, '/');
+}
+
+function route_path(string $path): string
+{
+  global $routeMap;
+
+  $parts = explode('#', $path, 2);
+  $basePath = $parts[0];
+  $fragment = $parts[1] ?? '';
+  $target = $routeMap[$basePath] ?? ('/' . ltrim($basePath, '/'));
+
+  if ($target !== '/') {
+    $target = rtrim($target, '/');
+  }
+
+  return $fragment !== '' ? $target . '#' . $fragment : $target;
+}
+
+function route_url(string $path): string
+{
+  global $baseUrl;
+  return rtrim($baseUrl, '/') . route_path($path);
+}
+
+function canonical_url(string $path): string
+{
+  global $siteBaseUrl;
+  return rtrim($siteBaseUrl, '/') . route_path($path);
 }

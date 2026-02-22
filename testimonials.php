@@ -32,7 +32,7 @@ require_once __DIR__ . '/includes/header.php';
         </div>
       </div>
       <div class="section-cta">
-        <a class="btn btn-primary" href="contact.php">Become Our Next Happy Patient</a>
+        <a class="btn btn-primary" href="/contact">Become Our Next Happy Patient</a>
       </div>
     </div>
   </section>

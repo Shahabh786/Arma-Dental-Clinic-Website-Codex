@@ -19,18 +19,18 @@ require_once __DIR__ . '/includes/header.php';
       <div class="service-grid">
         <?php
         $services = [
-          ["title" => "Smile Makeover (Cosmetic Dentistry)", "focus" => "Veneers, Teeth Whitening, Smile Designing", "desc" => "Transform your smile with personalized cosmetic treatments and natural-looking results.", "image" => "assets/images/smile_desing.jpg"],
-          ["title" => "Missing Tooth Solutions", "focus" => "Dental Implants and Bridges", "desc" => "Replace missing teeth with durable, natural-looking implants or fixed bridges.", "image" => "assets/images/implants.jpg"],
-          ["title" => "Tooth Pain Relief", "focus" => "Root Canal Treatment", "desc" => "Save your natural tooth and eliminate pain with modern root canal procedures.", "image" => "assets/images/rct.jpg"],
+          ["title" => "Smile Makeover (Cosmetic Dentistry)", "focus" => "Veneers, Teeth Whitening, Smile Designing", "desc" => "Transform your smile with personalized cosmetic treatments and natural-looking results.", "image" => "/assets/images/smile_desing.webp"],
+          ["title" => "Missing Tooth Solutions", "focus" => "Dental Implants and Bridges", "desc" => "Replace missing teeth with durable, natural-looking implants or fixed bridges.", "image" => "/assets/images/implants.webp"],
+          ["title" => "Tooth Pain Relief", "focus" => "Root Canal Treatment", "desc" => "Save your natural tooth and eliminate pain with modern root canal procedures.", "image" => "/assets/images/rct.webp"],
           ["title" => "Tooth Repair", "focus" => "Crowns and Bridges", "desc" => "Restore weak or broken teeth with custom-designed crowns and bridgework.", "image" => "https://images.pexels.com/photos/4687360/pexels-photo-4687360.jpeg?auto=compress&cs=tinysrgb&w=1200"],
-          ["title" => "Braces and Tooth Alignment", "focus" => "Metal Braces, Ceramic Braces, Clear Aligners", "desc" => "Correct misalignment with orthodontic options for children, teens, and adults.", "image" => "assets/images/braces.jpg"],
-          ["title" => "Gum Health and Bleeding Issues", "focus" => "Periodontic Gum Care", "desc" => "Treat gum bleeding, swelling, and infection with targeted periodontal care.", "image" => "assets/images/gum.jpg"],
-          ["title" => "Children's Dental Care", "focus" => "Preventive and Pediatric Treatments", "desc" => "Gentle and child-friendly care that supports healthy habits from a young age.", "image" => "assets/images/children.jpg"],
-          ["title" => "Tooth Removal and Oral Surgeries", "focus" => "Extractions and Minor Surgeries", "desc" => "Safe and sterile oral procedures for wisdom teeth and other surgical needs.", "image" => "assets/images/extraction.jpg"],
-          ["title" => "Dentures", "focus" => "Full and Partial Denture Sets", "desc" => "Comfortable, custom-fitted dentures designed for function and natural appearance.", "image" => "assets/images/dentures.jpg"],
+          ["title" => "Braces and Tooth Alignment", "focus" => "Metal Braces, Ceramic Braces, Clear Aligners", "desc" => "Correct misalignment with orthodontic options for children, teens, and adults.", "image" => "/assets/images/braces.webp"],
+          ["title" => "Gum Health and Bleeding Issues", "focus" => "Periodontic Gum Care", "desc" => "Treat gum bleeding, swelling, and infection with targeted periodontal care.", "image" => "/assets/images/gum.webp"],
+          ["title" => "Children's Dental Care", "focus" => "Preventive and Pediatric Treatments", "desc" => "Gentle and child-friendly care that supports healthy habits from a young age.", "image" => "/assets/images/children.webp"],
+          ["title" => "Tooth Removal and Oral Surgeries", "focus" => "Extractions and Minor Surgeries", "desc" => "Safe and sterile oral procedures for wisdom teeth and other surgical needs.", "image" => "/assets/images/extraction.webp"],
+          ["title" => "Dentures", "focus" => "Full and Partial Denture Sets", "desc" => "Comfortable, custom-fitted dentures designed for function and natural appearance.", "image" => "/assets/images/dentures.webp"],
           ["title" => "Teeth Cleaning and Polishing", "focus" => "Scaling and Oral Hygiene Counseling", "desc" => "Remove plaque and tartar buildup with professional cleaning and preventive guidance.", "image" => "https://images.pexels.com/photos/4269688/pexels-photo-4269688.jpeg?auto=compress&cs=tinysrgb&w=1200"],
           ["title" => "Emergency Dental Care", "focus" => "Pain, Injury, Swelling", "desc" => "Same-day support for urgent dental issues including trauma and severe pain.", "image" => "https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg?auto=compress&cs=tinysrgb&w=1200"],
-          ["title" => "Preventive Dental Checkups", "focus" => "X-Rays and Full Mouth Exams", "desc" => "Routine exams and diagnostics to detect and prevent problems early.", "image" => "assets/images/preventive.jpg"]
+          ["title" => "Preventive Dental Checkups", "focus" => "X-Rays and Full Mouth Exams", "desc" => "Routine exams and diagnostics to detect and prevent problems early.", "image" => "/assets/images/preventive.webp"]
         ];
         foreach ($services as $service):
         ?>
@@ -68,7 +68,7 @@ require_once __DIR__ . '/includes/header.php';
         </article>
       </div>
       <div class="section-cta">
-        <a class="btn btn-primary" href="contact.php">Book Service Consultation</a>
+        <a class="btn btn-primary" href="/contact">Book Service Consultation</a>
       </div>
     </div>
   </section>
