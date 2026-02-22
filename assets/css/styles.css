@@ -526,6 +526,273 @@ a {
   color: var(--brand-900);
 }
 
+.doctors-page {
+  padding-top: 24px;
+}
+
+.lead-dentist-card {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.72fr) minmax(0, 1.28fr);
+  gap: 24px;
+  padding: 18px;
+  border-radius: 22px;
+  border: 1px solid #d7e8f2;
+  background: linear-gradient(180deg, #ffffff, #f6fbff);
+  box-shadow: 0 20px 38px rgba(14, 56, 82, 0.12);
+  margin-bottom: 32px;
+}
+
+.lead-dentist-media {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  max-width: 360px;
+  width: 100%;
+}
+
+.lead-dentist-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.lead-dentist-content {
+  display: grid;
+  align-content: center;
+  gap: 14px;
+}
+
+.lead-pill {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #0c617f;
+  background: rgba(21, 153, 182, 0.14);
+  border: 1px solid rgba(21, 153, 182, 0.28);
+}
+
+.lead-dentist-content h2 {
+  margin-bottom: 2px;
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  color: var(--brand-900);
+}
+
+.lead-role {
+  margin-top: -6px;
+  color: var(--brand-700);
+  font-weight: 800;
+}
+
+.doctor-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.doctor-points li {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  align-items: start;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.doctor-inline-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, var(--brand-500), var(--mint));
+  box-shadow: 0 0 0 4px rgba(127, 225, 210, 0.22);
+  margin-top: 4px;
+}
+
+.lead-dentist-quote {
+  margin: 2px 0 0;
+  border: 1px solid #d7e8f2;
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px 16px;
+  position: relative;
+}
+
+.lead-dentist-quote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--brand-500), var(--mint));
+}
+
+.lead-dentist-quote p {
+  font-weight: 600;
+  color: #214b61;
+  padding-left: 10px;
+}
+
+.specialist-team-head {
+  margin-bottom: 20px;
+}
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.doctor-card {
+  border: 1px solid #d8e8f2;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-6px);
+  border-color: #bdd8e8;
+  box-shadow: 0 22px 36px rgba(14, 56, 82, 0.14);
+}
+
+.doctor-card-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.doctor-card-media img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.doctor-card:hover .doctor-card-media img {
+  transform: scale(1.04);
+}
+
+.doctor-specialty-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 0.72rem;
+  letter-spacing: 0.35px;
+  font-weight: 800;
+  color: #0d5f7f;
+  border: 1px solid rgba(21, 153, 182, 0.32);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.doctor-card-body {
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.doctor-card-body h3 {
+  color: var(--brand-900);
+  margin-bottom: 0;
+}
+
+.doctor-card-summary {
+  min-height: 48px;
+}
+
+.doctor-trust-grid {
+  display: grid;
+  gap: 7px;
+}
+
+.doctor-trust-grid span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #284b5f;
+  font-weight: 700;
+}
+
+.doctor-trust-grid span i {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, var(--brand-500), var(--mint));
+  box-shadow: 0 0 0 3px rgba(127, 225, 210, 0.2);
+  flex: 0 0 auto;
+}
+
+.doctor-comfort-line {
+  border: 1px solid #d8e9f2;
+  border-radius: 10px;
+  background: #f7fbfe;
+  padding: 9px 10px;
+  font-size: 0.9rem;
+}
+
+.doctor-mini-cta {
+  width: 100%;
+}
+
+.doctor-trust-banner-wrap {
+  margin-top: 28px;
+}
+
+.doctor-trust-head {
+  margin-bottom: 14px;
+}
+
+.doctor-trust-banner {
+  border-radius: 16px;
+  border: 1px solid #d8e8f2;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  padding: 14px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.doctor-trust-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(14, 56, 82, 0.08);
+  background: rgba(14, 56, 82, 0.03);
+  font-weight: 700;
+  text-align: center;
+}
+
+.doctor-trust-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, var(--brand-500), var(--mint));
+  box-shadow: 0 0 0 3px rgba(127, 225, 210, 0.2);
+  flex: 0 0 auto;
+}
+
 .why {
   background: linear-gradient(160deg, #f9fdff, #ecf6fb);
   border-top: 1px solid #deebf2;
@@ -1361,6 +1628,28 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .lead-dentist-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .lead-dentist-media img {
+    min-height: 300px;
+    max-height: 450px;
+  }
+
+  .doctor-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .doctor-trust-banner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .doctor-points {
+    grid-template-columns: 1fr;
+  }
+
   .hero {
     padding-top: 74px;
   }
@@ -1578,6 +1867,40 @@ a {
   }
 
   .trust-item {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .doctors-page {
+    padding-top: 10px;
+  }
+
+  .lead-dentist-card {
+    padding: 12px;
+    margin-bottom: 24px;
+  }
+
+  .lead-dentist-media img {
+    min-height: 230px;
+  }
+
+  .doctor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-card-body {
+    padding: 14px;
+  }
+
+  .doctor-card-summary {
+    min-height: 0;
+  }
+
+  .doctor-trust-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-trust-item {
     justify-content: flex-start;
     text-align: left;
   }
