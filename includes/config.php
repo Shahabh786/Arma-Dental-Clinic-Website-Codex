@@ -7,6 +7,7 @@ $whatsAppLink = "https://wa.me/91{$phone}";
 $callLink = "tel:+91{$phone}";
 $tagline = "Smile Design & Dental Wellness";
 $siteBaseUrl = "https://www.armadental.in";
+$enablePrettyUrls = getenv('ENABLE_PRETTY_URLS') === '1';
 $defaultKeywords = "Arma Dental Clinic, Mira Road dentist, dental clinic Thane, cosmetic dentistry, root canal, dental implants, teeth whitening, oral care";
 $pageMeta = [
   "index.php" => [
@@ -18,6 +19,11 @@ $pageMeta = [
     "title" => "About Our Clinic and Team",
     "description" => "Learn how Arma Dental Clinic combines clinical precision, empathy, and technology to deliver confident smiles.",
     "keywords" => $defaultKeywords . ", dental team, clinic philosophy"
+  ],
+  "why-us.php" => [
+    "title" => "Why Choose Arma Dental Clinic",
+    "description" => "Discover what makes Arma Dental Clinic trusted for ethical, comfortable, and modern dental care in Mira Road.",
+    "keywords" => $defaultKeywords . ", why choose arma dental, ethical dentistry, painless treatment"
   ],
   "doctors.php" => [
     "title" => "Meet Our Expert Dental Team",
@@ -53,6 +59,7 @@ $baseUrl = "{$scheme}://{$host}";
 $routeMap = [
   'index.php' => '/',
   'about.php' => '/about',
+  'why-us.php' => '/why-us',
   'doctors.php' => '/doctors',
   'services.php' => '/services',
   'appointments.php' => '/appointments',
@@ -74,15 +81,18 @@ function page_url(string $path): string
 
 function route_path(string $path): string
 {
-  global $routeMap;
+  global $routeMap, $enablePrettyUrls;
 
   $parts = explode('#', $path, 2);
   $basePath = $parts[0];
   $fragment = $parts[1] ?? '';
-  $target = $routeMap[$basePath] ?? ('/' . ltrim($basePath, '/'));
-
-  if ($target !== '/') {
-    $target = rtrim($target, '/');
+  if ($enablePrettyUrls) {
+    $target = $routeMap[$basePath] ?? ('/' . ltrim($basePath, '/'));
+    if ($target !== '/') {
+      $target = rtrim($target, '/');
+    }
+  } else {
+    $target = $basePath === 'index.php' ? 'index.php' : ltrim($basePath, '/');
   }
 
   return $fragment !== '' ? $target . '#' . $fragment : $target;
@@ -91,11 +101,31 @@ function route_path(string $path): string
 function route_url(string $path): string
 {
   global $baseUrl;
-  return rtrim($baseUrl, '/') . route_path($path);
+  $target = route_path($path);
+  if (str_starts_with($target, '/')) {
+    return rtrim($baseUrl, '/') . $target;
+  }
+  return rtrim($baseUrl, '/') . '/' . ltrim($target, '/');
 }
 
 function canonical_url(string $path): string
 {
-  global $siteBaseUrl;
-  return rtrim($siteBaseUrl, '/') . route_path($path);
+  global $siteBaseUrl, $routeMap, $enablePrettyUrls;
+
+  $parts = explode('#', $path, 2);
+  $basePath = $parts[0];
+  $fragment = $parts[1] ?? '';
+
+  if ($enablePrettyUrls) {
+    $canonicalPath = $routeMap[$basePath] ?? ('/' . ltrim($basePath, '/'));
+  } else {
+    $canonicalPath = $basePath === 'index.php' ? '/' : ('/' . ltrim($basePath, '/'));
+  }
+
+  if ($canonicalPath !== '/') {
+    $canonicalPath = rtrim($canonicalPath, '/');
+  }
+
+  $url = rtrim($siteBaseUrl, '/') . $canonicalPath;
+  return $fragment !== '' ? $url . '#' . $fragment : $url;
 }

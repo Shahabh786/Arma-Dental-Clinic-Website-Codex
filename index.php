@@ -2,6 +2,7 @@
 $requestPath = (string) parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 $slugDispatch = [
   '/about' => __DIR__ . '/about.php',
+  '/why-us' => __DIR__ . '/why-us.php',
   '/doctors' => __DIR__ . '/doctors.php',
   '/services' => __DIR__ . '/services.php',
   '/appointments' => __DIR__ . '/appointments.php',
@@ -32,7 +33,7 @@ require_once __DIR__ . '/includes/header.php';
           precise diagnostics, and a calm care experience for families and professionals.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="/appointments#appointment-request-form">Schedule Visit</a>
+          <a class="btn btn-primary" href="appointments.php#appointment-request-form">Schedule Visit</a>
           <a class="btn btn-outline" href="<?php echo esc($whatsAppLink); ?>?text=Hi%20Arma%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
         </div>
         <ul class="hero-points">
@@ -99,7 +100,7 @@ require_once __DIR__ . '/includes/header.php';
         </article>
       </div>
       <div class="section-cta">
-        <a class="btn btn-outline" href="/services">View All Services</a>
+        <a class="btn btn-outline" href="services.php">View All Services</a>
       </div>
     </div>
   </section>

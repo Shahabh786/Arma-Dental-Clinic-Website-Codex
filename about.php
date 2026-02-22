@@ -76,7 +76,7 @@ require_once __DIR__ . '/includes/header.php';
         </article>
       </div>
       <div class="section-cta">
-        <a class="btn btn-primary" href="/contact">Book Your Consultation</a>
+        <a class="btn btn-primary" href="contact.php">Book Your Consultation</a>
       </div>
     </div>
   </section>

@@ -49,7 +49,7 @@ require_once __DIR__ . '/includes/header.php';
       </div>
 
       <div class="section-cta">
-        <a class="btn btn-primary" href="/appointments">Book Consultation</a>
+        <a class="btn btn-primary" href="appointments.php">Book Consultation</a>
       </div>
     </div>
   </section>

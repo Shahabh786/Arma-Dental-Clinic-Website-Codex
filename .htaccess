@@ -2,7 +2,7 @@ RewriteEngine On
 
 # Redirect legacy .php URLs to clean slugs.
 RewriteRule ^index\.php$ / [R=301,L]
-RewriteRule ^(about|doctors|services|appointments|contact|testimonials|clinic-tour)\.php$ /$1 [R=301,L,NC]
+RewriteRule ^(about|why-us|doctors|services|appointments|contact|testimonials|clinic-tour)\.php$ /$1 [R=301,L,NC]
 
 # Existing files/directories are served directly.
 RewriteCond %{REQUEST_FILENAME} -f [OR]
@@ -11,4 +11,4 @@ RewriteRule ^ - [L]
 
 # Map clean routes to PHP files.
 RewriteRule ^$ index.php [L]
-RewriteRule ^(about|doctors|services|appointments|contact|testimonials|clinic-tour)/?$ $1.php [L,NC]
+RewriteRule ^(about|why-us|doctors|services|appointments|contact|testimonials|clinic-tour)/?$ $1.php [L,NC]

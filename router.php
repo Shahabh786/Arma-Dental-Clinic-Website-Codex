@@ -10,6 +10,7 @@ if ($uri !== '/' && is_file($filePath)) {
 
 $slugToFile = [
     '/about' => '/about.php',
+    '/why-us' => '/why-us.php',
     '/doctors' => '/doctors.php',
     '/services' => '/services.php',
     '/appointments' => '/appointments.php',
@@ -21,6 +22,7 @@ $slugToFile = [
 $legacyToSlug = [
     '/index.php' => '/',
     '/about.php' => '/about',
+    '/why-us.php' => '/why-us',
     '/doctors.php' => '/doctors',
     '/services.php' => '/services',
     '/appointments.php' => '/appointments',

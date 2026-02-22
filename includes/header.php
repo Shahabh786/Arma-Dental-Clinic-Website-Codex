@@ -18,14 +18,15 @@ $navItems = [
 
 $aboutSubItems = [
   'about.php' => 'About Us',
+  'why-us.php' => 'Why Us',
   'clinic-tour.php' => 'Clinic Tour',
   'contact.php#hours-directions' => 'Hours & Directions',
   'testimonials.php' => 'Patient Testimonials'
 ];
-$aboutGroupPages = ['about.php', 'clinic-tour.php', 'testimonials.php'];
+$aboutGroupPages = ['about.php', 'why-us.php', 'clinic-tour.php', 'testimonials.php'];
 $isAboutGroupPage = in_array($pagePath, $aboutGroupPages, true);
 
-if (PHP_SAPI !== 'cli') {
+if ($enablePrettyUrls && PHP_SAPI !== 'cli') {
   $requestUri = $_SERVER['REQUEST_URI'] ?? '';
   $requestPath = (string) parse_url($requestUri, PHP_URL_PATH);
   $queryString = isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] !== '' ? ('?' . $_SERVER['QUERY_STRING']) : '';
@@ -115,7 +116,7 @@ if (PHP_SAPI !== 'cli') {
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="<?php echo esc(route_path('index.php')); ?>" class="brand" aria-label="<?php echo esc($clinicName); ?> home">
+      <a href="<?php echo esc($enablePrettyUrls ? route_path('index.php') : 'index.php'); ?>" class="brand" aria-label="<?php echo esc($clinicName); ?> home">
         <img class="brand-logo" src="/assets/images/logo-header.png" alt="<?php echo esc($clinicName); ?> logo" />
       </a>
 
